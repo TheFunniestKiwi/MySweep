@@ -20,8 +20,6 @@ struct GameBoardView: View {
             }
             GeometryReader { geometry in
                let columns = Array(repeating: GridItem(.flexible(), spacing: 2), count: viewModel.size)
-                let smallestDimension = min(geometry.size.width, geometry.size.height)
-                let sizes = smallestDimension / CGFloat(max(viewModel.size, viewModel.size))
 
                 LazyVGrid(columns: columns, spacing: 4) {
                     ForEach(0..<viewModel.size, id: \.self) { row in

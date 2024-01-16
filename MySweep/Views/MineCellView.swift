@@ -14,7 +14,9 @@ struct MineCellView: View {
         .background(viewModel.grid[row][column].isRevealed ? Color.white : Color.gray)
         .scaleEffect(isLongPressed ? 1.5 : 1.0)
         .onTapGesture {
-            viewModel.revealCell(at: row, column: column)
+            if !viewModel.disableCells{
+                viewModel.revealCell(at: row, column: column)
+            }
         }
         .onLongPressGesture(minimumDuration:0.8, pressing: { isPressing in
             withAnimation{

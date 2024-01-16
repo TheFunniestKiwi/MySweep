@@ -6,6 +6,7 @@ class MineSweeperGameViewModel: ObservableObject {
     public static var difficulty: String = "easy"
     @Published var gameState: GameState = .start
     @Published var gameTime = 0
+    @Published var disableCells: Bool = false
     var timer: Timer?
 
     var grid: [[MineCell]] {
@@ -42,6 +43,7 @@ class MineSweeperGameViewModel: ObservableObject {
     
     func startNewGame() {
         gameTime = 0
+        disableCells = false
         startTimer()
         model.startNewGame()
      
@@ -61,8 +63,9 @@ class MineSweeperGameViewModel: ObservableObject {
     }
     
     func revealCell(at row: Int, column: Int) {
-        withAnimation(.easeIn(duration: 0.5)){
+         withAnimation(.easeIn(duration: 0.5)){
             if model.checkMine(row: row, column: column){
+                disableCells = true
                 stopTimer()
                 model.revealMines()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2){
@@ -95,6 +98,7 @@ class MineSweeperGameViewModel: ObservableObject {
         MineSweeperGameViewModel.difficulty = difficulty
         gameState = .gameplay
         model = MineSweeperGameViewModel.createGame(difficulty: difficulty)
+        startNewGame()
     }
     
 }

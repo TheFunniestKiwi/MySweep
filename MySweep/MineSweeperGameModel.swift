@@ -9,7 +9,9 @@ struct MineSweeperGameModel {
     init( size: Int) {
         self.size = size
         self.mines = Int(Double(size * size) * 0.15)
+        self.flags = Int(Double(size * size) * 0.15)
         startNewGame()
+       
     }
     
     
