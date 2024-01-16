@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		414B51642B540CE4006D5915 /* MySweepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51632B540CE4006D5915 /* MySweepApp.swift */; };
-		414B51662B540CE4006D5915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51652B540CE4006D5915 /* ContentView.swift */; };
+		414B51662B540CE4006D5915 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51652B540CE4006D5915 /* MainView.swift */; };
 		414B51682B540CE5006D5915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414B51672B540CE5006D5915 /* Assets.xcassets */; };
 		414B516B2B540CE5006D5915 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414B516A2B540CE5006D5915 /* Preview Assets.xcassets */; };
 		414B51752B540CE5006D5915 /* MySweepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51742B540CE5006D5915 /* MySweepTests.swift */; };
 		414B517F2B540CE5006D5915 /* MySweepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B517E2B540CE5006D5915 /* MySweepUITests.swift */; };
 		414B51812B540CE5006D5915 /* MySweepUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51802B540CE5006D5915 /* MySweepUITestsLaunchTests.swift */; };
 		414B518E2B540D12006D5915 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B518D2B540D12006D5915 /* MineCell.swift */; };
-		414B51902B540D3C006D5915 /* MySweepGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B518F2B540D3C006D5915 /* MySweepGame.swift */; };
 		414B51922B540D5E006D5915 /* MineCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51912B540D5E006D5915 /* MineCellView.swift */; };
 		414B51942B540D7E006D5915 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414B51932B540D7E006D5915 /* GameBoardView.swift */; };
 		4187B89C2B5463E100670E0B /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187B89B2B5463E100670E0B /* StartView.swift */; };
@@ -23,6 +22,11 @@
 		4187B8A22B548AC100670E0B /* DifficultyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187B8A12B548AC100670E0B /* DifficultyButtonView.swift */; };
 		4187B8A42B5493CD00670E0B /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187B8A32B5493CD00670E0B /* GIFView.swift */; };
 		4187B8A72B54944400670E0B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4187B8A62B54944400670E0B /* SDWebImageSwiftUI */; };
+		4189F8032B55B5EC004BEC5D /* WinGameVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189F8022B55B5EC004BEC5D /* WinGameVIew.swift */; };
+		4189F8072B5604F3004BEC5D /* MineSweeperGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189F8062B5604F3004BEC5D /* MineSweeperGameModel.swift */; };
+		4189F8092B56050E004BEC5D /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189F8082B56050E004BEC5D /* GameState.swift */; };
+		4189F80B2B560632004BEC5D /* MineSweeperGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189F80A2B560632004BEC5D /* MineSweeperGameViewModel.swift */; };
+		4189F80E2B5614FA004BEC5D /* ChooseDifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189F80D2B5614FA004BEC5D /* ChooseDifficultyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,7 @@
 /* Begin PBXFileReference section */
 		414B51602B540CE4006D5915 /* MySweep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySweep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414B51632B540CE4006D5915 /* MySweepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweepApp.swift; sourceTree = "<group>"; };
-		414B51652B540CE4006D5915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		414B51652B540CE4006D5915 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		414B51672B540CE5006D5915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		414B516A2B540CE5006D5915 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		414B51702B540CE5006D5915 /* MySweepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySweepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,13 +58,17 @@
 		414B517E2B540CE5006D5915 /* MySweepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweepUITests.swift; sourceTree = "<group>"; };
 		414B51802B540CE5006D5915 /* MySweepUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweepUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		414B518D2B540D12006D5915 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
-		414B518F2B540D3C006D5915 /* MySweepGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySweepGame.swift; sourceTree = "<group>"; };
 		414B51912B540D5E006D5915 /* MineCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCellView.swift; sourceTree = "<group>"; };
 		414B51932B540D7E006D5915 /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		4187B89B2B5463E100670E0B /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		4187B89F2B5486FD00670E0B /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		4187B8A12B548AC100670E0B /* DifficultyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyButtonView.swift; sourceTree = "<group>"; };
 		4187B8A32B5493CD00670E0B /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		4189F8022B55B5EC004BEC5D /* WinGameVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinGameVIew.swift; sourceTree = "<group>"; };
+		4189F8062B5604F3004BEC5D /* MineSweeperGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineSweeperGameModel.swift; sourceTree = "<group>"; };
+		4189F8082B56050E004BEC5D /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		4189F80A2B560632004BEC5D /* MineSweeperGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineSweeperGameViewModel.swift; sourceTree = "<group>"; };
+		4189F80D2B5614FA004BEC5D /* ChooseDifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDifficultyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,17 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				414B51632B540CE4006D5915 /* MySweepApp.swift */,
-				414B51652B540CE4006D5915 /* ContentView.swift */,
+				4189F80C2B56074D004BEC5D /* Views */,
 				414B51672B540CE5006D5915 /* Assets.xcassets */,
 				414B51692B540CE5006D5915 /* Preview Content */,
 				414B518D2B540D12006D5915 /* MineCell.swift */,
-				414B518F2B540D3C006D5915 /* MySweepGame.swift */,
-				414B51912B540D5E006D5915 /* MineCellView.swift */,
-				414B51932B540D7E006D5915 /* GameBoardView.swift */,
-				4187B89B2B5463E100670E0B /* StartView.swift */,
-				4187B89F2B5486FD00670E0B /* GameOverView.swift */,
-				4187B8A12B548AC100670E0B /* DifficultyButtonView.swift */,
-				4187B8A32B5493CD00670E0B /* GIFView.swift */,
+				4189F8062B5604F3004BEC5D /* MineSweeperGameModel.swift */,
+				4189F8082B56050E004BEC5D /* GameState.swift */,
+				4189F80A2B560632004BEC5D /* MineSweeperGameViewModel.swift */,
 			);
 			path = MySweep;
 			sourceTree = "<group>";
@@ -151,6 +155,22 @@
 				414B51802B540CE5006D5915 /* MySweepUITestsLaunchTests.swift */,
 			);
 			path = MySweepUITests;
+			sourceTree = "<group>";
+		};
+		4189F80C2B56074D004BEC5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4187B8A12B548AC100670E0B /* DifficultyButtonView.swift */,
+				414B51932B540D7E006D5915 /* GameBoardView.swift */,
+				414B51652B540CE4006D5915 /* MainView.swift */,
+				4187B8A32B5493CD00670E0B /* GIFView.swift */,
+				4189F8022B55B5EC004BEC5D /* WinGameVIew.swift */,
+				4187B89F2B5486FD00670E0B /* GameOverView.swift */,
+				4187B89B2B5463E100670E0B /* StartView.swift */,
+				414B51912B540D5E006D5915 /* MineCellView.swift */,
+				4189F80D2B5614FA004BEC5D /* ChooseDifficultyView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				414B51902B540D3C006D5915 /* MySweepGame.swift in Sources */,
 				4187B8A42B5493CD00670E0B /* GIFView.swift in Sources */,
 				4187B8A22B548AC100670E0B /* DifficultyButtonView.swift in Sources */,
-				414B51662B540CE4006D5915 /* ContentView.swift in Sources */,
+				4189F80E2B5614FA004BEC5D /* ChooseDifficultyView.swift in Sources */,
+				414B51662B540CE4006D5915 /* MainView.swift in Sources */,
 				414B51642B540CE4006D5915 /* MySweepApp.swift in Sources */,
+				4189F8072B5604F3004BEC5D /* MineSweeperGameModel.swift in Sources */,
+				4189F80B2B560632004BEC5D /* MineSweeperGameViewModel.swift in Sources */,
+				4189F8092B56050E004BEC5D /* GameState.swift in Sources */,
+				4189F8032B55B5EC004BEC5D /* WinGameVIew.swift in Sources */,
 				414B518E2B540D12006D5915 /* MineCell.swift in Sources */,
 				414B51922B540D5E006D5915 /* MineCellView.swift in Sources */,
 				414B51942B540D7E006D5915 /* GameBoardView.swift in Sources */,
@@ -468,7 +492,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +520,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
