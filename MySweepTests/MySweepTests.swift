@@ -1,10 +1,3 @@
-//
-//  MySweepTests.swift
-//  MySweepTests
-//
-//  Created by Bartłomiej Lachowski on 14/01/2024.
-//
-
 import XCTest
 @testable import MySweep
 

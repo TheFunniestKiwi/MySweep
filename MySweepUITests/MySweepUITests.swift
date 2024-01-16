@@ -1,10 +1,3 @@
-//
-//  MySweepUITests.swift
-//  MySweepUITests
-//
-//  Created by Bartłomiej Lachowski on 14/01/2024.
-//
-
 import XCTest
 
 final class MySweepUITests: XCTestCase {

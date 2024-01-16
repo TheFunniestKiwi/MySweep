@@ -1,10 +1,3 @@
-//
-//  GameBoardView.swift
-//  MySweep
-//
-//  Created by Bartłomiej Lachowski on 14/01/2024.
-//
-
 import SwiftUI
 
 struct GameBoardView: View {
@@ -36,7 +29,7 @@ struct GameBoardView: View {
                                 MineCellView(viewModel: viewModel, row: row, column: column)
                                     .scaledToFit()
                             }
-                   } 
+                   }
                }
                
            }

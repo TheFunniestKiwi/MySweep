@@ -1,10 +1,3 @@
-//
-//  WinGameVIew.swift
-//  MySweep
-//
-//  Created by Bartłomiej Lachowski on 15/01/2024.
-//
-
 import SwiftUI
 
 struct WinGameVIew: View {
